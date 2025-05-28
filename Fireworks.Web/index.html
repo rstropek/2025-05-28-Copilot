@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fireworks Display</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+        
+        canvas {
+            border: 1px solid #333;
+            cursor: pointer;
+        }
+        
+        .info {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: white;
+            font-size: 14px;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            border-radius: 5px;
+        }
+        
+        .controls {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            text-align: center;
+        }
+        
+        button {
+            background: #444;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        
+        button:hover {
+            background: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="info">
+        <div>Fireworks Display</div>
+        <div>Click to launch fireworks!</div>
+        <div>Auto-launch: <span id="autoStatus">ON</span></div>
+    </div>
+    
+    <canvas id="fireworksCanvas" width="800" height="600"></canvas>
+    
+    <div class="controls">
+        <button id="toggleAutoBtn">Toggle Auto-Launch</button>
+        <button id="clearBtn">Clear Screen</button>
+        <button id="burstBtn">Burst Mode</button>
+    </div>
+
+    <script src="randomFloat.js"></script>
+    <script src="particle.js"></script>
+    <script src="rocket.js"></script>
+    <script src="fireworks.js"></script>
+</body>
+</html>
